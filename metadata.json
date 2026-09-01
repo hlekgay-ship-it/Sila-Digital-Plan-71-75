@@ -1,0 +1,8 @@
+{
+  "name": "ระบบแผนพัฒนาเทศบาลเมืองศิลา Sila Digital Plan ",
+  "description": "ระบบแผนพัฒนาเทศบาลเมืองศิลา\nSila Digital Plan • แผนพัฒนาท้องถิ่น (พ.ศ. 2571-2575)",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

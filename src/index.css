@@ -1,0 +1,201 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-primary: 'Sarabun', 'Segoe UI', Tahoma, sans-serif;
+    --color-emerald-950: #022c22;
+    --color-emerald-900: #064e3b;
+    --color-emerald-800: #065f46;
+    --color-emerald-700: #047857;
+    --color-emerald-600: #059669;
+    --color-emerald-500: #10b981;
+    --color-emerald-100: #d1fae5;
+    --color-emerald-50: #ecfdf5;
+  }
+
+  html {
+    font-family: var(--font-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    font-family: 'Sarabun', 'Segoe UI', Tahoma, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.2px;
+    background-color: #f8fafc;
+    color: #1e293b;
+  }
+
+  /* Universal font family assignment */
+  *, *::before, *::after {
+    font-family: 'Sarabun', 'Segoe UI', Tahoma, sans-serif;
+  }
+
+  /* Typography Hierarchy & Weights */
+  h1 {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: -0.2px;
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: -0.1px;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.45;
+    letter-spacing: 0px;
+  }
+
+  h4, h5, h6 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.45;
+  }
+
+  /* Body text & paragraph styling */
+  p, span, div, li, td {
+    line-height: 1.5;
+    letter-spacing: 0.2px;
+  }
+
+  /* Tables font & cell normalization */
+  table {
+    font-family: 'Sarabun', 'Segoe UI', Tahoma, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.2px;
+  }
+
+  th {
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.2px;
+  }
+
+  td {
+    font-size: 13.5px;
+    font-weight: 400;
+  }
+
+  /* Inputs & Selects normalization */
+  input, select, textarea {
+    font-family: 'Sarabun', 'Segoe UI', Tahoma, sans-serif !important;
+    font-size: 13.5px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.2px;
+  }
+
+  /* Buttons normalization */
+  button {
+    font-family: 'Sarabun', 'Segoe UI', Tahoma, sans-serif !important;
+    font-size: 13px;
+    letter-spacing: 0.2px;
+  }
+
+  /* Captions & Subtexts */
+  small, .caption, .subtext {
+    font-size: 12px;
+    font-weight: 400;
+    color: #6B7280;
+    line-height: 1.5;
+    letter-spacing: 0.2px;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Print stylesheets for Government Form reports (ผ.01 and ผ.02) */
+@page {
+  size: landscape;
+  margin: 12mm 10mm;
+}
+
+@media print {
+  body, html, #root, main {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .no-print,
+  #sidebar,
+  #topbar,
+  .print-hide,
+  header,
+  nav {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .page-break {
+    page-break-after: always;
+    break-after: page;
+  }
+  table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+    font-size: 10pt !important;
+    page-break-inside: auto;
+  }
+  tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+  thead {
+    display: table-header-group;
+  }
+  tfoot {
+    display: table-footer-group;
+  }
+  th, td {
+    border: 1px solid #1e293b !important;
+    padding: 5px 6px !important;
+    color: #000000 !important;
+  }
+  th {
+    background-color: #f8fafc !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .report-sheet {
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+    width: 100% !important;
+  }
+}
